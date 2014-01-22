@@ -1,0 +1,1092 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+
+/* 
+
+Table of Contents -
+
+  1. Default
+  2. Variable Media Queries
+  3. Custom CSS
+  4. Menu sections navigation
+  5. Header
+  6. Menu
+  7. Footer
+  8. SOCIAL BAR WIDGET / PROFILE DATA
+  9. IPHONE WIDTH
+*/
+
+/* ===============================
+   1. Default
+   =============================== */
+
+body {
+    background-image: image('/images/background.png');
+    font-family:@font-swatch5-font-family;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+a {
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@color-swatch3;
+    letter-spacing: @font-swatch5-letter-spacing;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0 0 10px;
+}
+
+.bk-content-text p {
+    font-family:@font-swatch8-font-family;
+    font-weight: @font-swatch8-font-weight;
+    color:@font-swatch8-color;
+    line-height:@font-swatch8-line-height;
+    letter-spacing: @font-swatch8-letter-spacing;
+    font-size: @font-swatch8-font-size;           
+}
+
+h1 {
+    font-family:@font-swatch1-font-family;
+    font-weight: @font-swatch1-font-weight;
+    color:@font-swatch1-color;
+    line-height:@font-swatch1-line-height;
+    letter-spacing: @font-swatch1-letter-spacing;
+    font-size: @font-swatch1-font-size;
+}
+
+h2 {
+    font-family:@font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    font-weight: @font-swatch2-font-weight;
+    line-height:@font-swatch2-line-height;
+    color: @font-swatch2-color;
+    letter-spacing: @font-swatch2-letter-spacing;
+    margin:40px 0 0 0;
+}
+
+h3 {
+    font-family:@font-swatch3-font-family;
+    font-size:@font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    color: @font-swatch3-color;
+    line-height:@font-swatch3-line-height;
+    letter-spacing: @font-swatch3-letter-spacing;
+}
+
+h4 {
+    font-family:@font-swatch4-font-family;
+    font-size:@font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+p {
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+    letter-spacing: @font-swatch5-letter-spacing;
+}
+
+ol, li, ul {
+    font-family:@font-swatch5-font-family;
+    font-size:@font-swatch5-font-size;
+    font-weight:@font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    color:@font-swatch5-color;
+}
+
+/* ===============================
+   2. VARIABLE MEDIA QUERIES
+   =============================== */
+
+@tablet: ~"only screen and (max-width: 768px)";
+@mobile: ~"only screen and (max-width: 480px)";
+@media only screen and (max-width: 1084px);
+
+/* ===============================
+   3. CUSTOM CSS
+   =============================== */
+
+.contacttextwidget {
+    text-align:center;
+}
+
+.bk-content-text h2 {
+    background-color:@color-swatch1;
+    text-align:center;
+    overflow:hidden;
+}
+
+.bk-content-text h2:after {
+    content: "";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    width: 30%;
+    margin-bottom: .15em;
+    left:1em;
+    margin-right:-50px;
+}
+
+.bk-content-text h2:before {
+    content: "";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    width: 30%;
+    margin-bottom: .15em;
+    right:1em;
+    margin-left:-50px;
+}
+
+.widget.menu .main .menu-items li .inner-item .menu-section-item-dietary-props .dietary-icon {
+    padding:3px;
+}
+
+.main{
+    padding:0;
+}
+
+.widget.logo img {
+    width:100px;
+}
+
+.socialheader {
+    float:none;
+}
+
+
+/* ===============================
+   4. MENU SECTIONS NAVIGATION
+   =============================== */
+
+.widget.menusections {
+    text-align: center;
+    padding: 20px 0 10px 0;
+    min-height: 30px;
+    background-color: rgba(1, 1, 1, 0.05);
+    ul {
+        display: inline-block;
+        list-style: none;
+        margin: 0px;
+        padding: 0;
+        @media @tablet {
+            /* Hidden until nav icon is clicked */
+            display: none;
+            /* Then these styles are applied */
+            width: 100%;
+            margin: 30px 0 0;
+            background-color: @color-swatch1;
+        }
+
+        /* ALIGN CENTER */
+        &.align-center {
+            li {
+                text-align: center;
+                &:hover {
+                    li {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        /* ALIGN LEFT */
+        &.align-left {
+            li {
+                text-align: left;
+                &:hover {
+                    li {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        /* ALIGN RIGHT */
+        &.align-right {
+            li {
+                text-align: right;
+                &:hover {
+                    li {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        li {
+            padding: 0 15px;
+            float: left;
+            display: block;
+            padding-right: 20px;
+            @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted @color-swatch3;
+            }
+            &:last-child {
+                    @media @tablet {
+                        border-bottom: 0;
+                    }
+            }
+
+            a {
+                display: block;
+                font-family:@font-swatch6-font-family;
+                font-size:@font-swatch6-font-size;
+                font-weight: @font-swatch6-font-weight;
+                color: @font-swatch6-color;
+                line-height:@font-swatch6-line-height;
+                letter-spacing: @font-swatch6-letter-spacing;
+                &:hover {
+                    color: @font-swatch6-color-hover;
+                    text-decoration: none;
+                }
+                &:after {
+                        color: @color-swatch6;
+                }
+            }
+            &:last-child a:after {
+                            content: "";
+            }
+        }
+    }
+    a {
+            &.menu-pull {
+                display: none;
+                @media @tablet {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 10px;
+                    right: 49%;
+                    &:after {
+                        content:"";
+                        background: image('/images/nav-icon.png') no-repeat;
+                        width: 15px;
+                        height: 20px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+}
+
+
+/* ===============================
+   5. HEADER
+   =============================== */
+
+header {
+    background-color:@color-swatch3;
+    padding:0;
+
+ .companyheader {
+        width:100%;
+        float:none;
+        background-color:@color-swatch3;
+        padding:100px 0px 120px 0px;
+        .logo, .companyname {
+            text-align: center;
+            float:none;
+        }
+
+        .companyname a {
+            display: block;
+            font-family: @font-swatch10-font-family;
+            font-weight: @font-swatch10-font-weight;
+            color: @font-swatch10-color;
+            line-height: @font-swatch10-line-height;
+            letter-spacing: @font-swatch10-letter-spacing;
+            font-size: @font-swatch10-font-size;
+                &:hover {
+                    text-decoration: none;
+                }
+                @media @mobile {
+                    font-size: bkscale(@font-swatch10-font-size,0.8);
+                    line-height: bkscale(@font-swatch10-line-height,0.8);
+                    padding-bottom: 20px;
+                }
+        } 
+
+    }/* end companyheader */
+
+    .widget.content {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        margin-top:10px;
+        @media @mobile {
+            width: 100%;
+        }
+    }
+
+    .clicktocall {
+        text-align: center;
+        margin-top: 20px;
+        @media @mobile {
+            margin-bottom: 60px;
+        }
+            a {
+                border: 2px solid @color-swatch3;
+                padding: 10px 13px;
+                font-family: @font-swatch5-font-family;
+                font-size: @font-swatch5-font-size;
+                color: @font-swatch5-color;
+                    &:hover {
+                        color: @color-swatch3;
+                        text-decoration: none;
+                    }
+            }
+    } /* end clicktocall */
+
+}   /* end header */
+
+/* ===============================
+   6. MENU
+   =============================== */
+
+.container{
+    border:1px solid black;
+    margin-top:40px;
+    padding-bottom:40px;
+}
+
+.widget.menu {
+    margin:0 auto;
+    margin-top: 50px;
+    @media only screen and (max-width: 1084px) {
+         width: 90%;
+    }
+    @media @tablet {
+        background-image: none;
+        width:100%;
+    }
+
+    .main {
+        width: 90%;
+        padding-top:30px;
+        margin: 0 auto;
+            @media only screen and (max-width: 1084px) {
+                width: 93%;
+            }
+            @media @tablet {
+                background-color: @color-swatch1;
+                width:90%;
+                padding: 10px 0;
+            }
+            @media @mobile {
+                margin-bottom: 10px;
+                padding:0;
+            }
+
+            ol, li {    /* removes list-style */
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            } 
+
+
+            /* MENU-HEADER AND SUB-SECTION HEADER */
+
+            .menu-header, .menu-subsection-header {
+                padding: 0 0 1.2em;
+                    @media @tablet {
+                        padding: 1.25em 0 0.75em;
+                    }
+                    h1, h2, {    /* menu-name menu-section-name */
+                text-align: center;
+                overflow: hidden; 
+                    &:before, &:after {
+                        content: "";
+                        display: inline-block;
+                        height: .1em;
+                        position: relative;
+                        vertical-align: middle;
+                        margin-bottom: 1.4em;
+                        @media only screen and (max-width: 480px) {
+                            content: none;
+                            display: block;
+                            height: auto;
+                            width: auto;
+                            margin-bottom: 0;
+                        }
+                    }
+                    &:before {
+                        right: 1em;
+                        margin-left: -50%;
+                        @media only screen and (max-width: 480px) {
+                            right: 0;
+                            margin-left: 0;
+                         }
+                    }
+                    &:after {
+                        left: 1em;
+                        margin-right: -50%;
+                        @media only screen and (max-width: 480px) {
+                            right: 0;
+                            margin-left: 0;
+                         }
+                    }
+                @media only screen and (max-width: 480px) {
+                     padding: 1em 0 0.5em;
+                }
+            }
+                    p {    /* menu-description  menu-section-description  menu-availability */
+                        text-align: center;       
+                    }  
+            }   /* end MENU-HEADER AND SUB-SECTION HEADER */
+
+
+            /* ITEMS */
+
+            .menu-items { /* ol */
+                column-count: 3;
+                column-gap: 50px;
+               -moz-column-count: 3;
+               -moz-column-gap: 50px;
+               -webkit-column-count: 3;
+               -webkit-column-gap : 50px;
+
+                @media @tablet { 
+                    column-count: 2;
+                    column-gap: 60px;
+                   -moz-column-count: 2;
+                   -moz-column-gap: 60px;
+                   -webkit-column-count: 2;
+                   -webkit-column-gap : 60px;
+                }
+
+                @media @mobile { 
+                    column-count: 1;
+                   -moz-column-count: 1;
+                   -webkit-column-count: 1;
+                }
+                
+                li {    /* menu-item */
+                    position: relative;
+                    display: inline-block;
+                    &.menu-item-promoted { /* menu-item-promoted */
+                        padding: 1.2em;
+                        margin: 11px 1px 20px;
+                        border: 5px solid @color-swatch3;
+                        .inner-item {
+                            border: 0;
+                            padding: 0;
+                            margin: 0;
+                        }
+                        h3 {
+                            width: auto;
+                            margin-top: 0 !important;
+                            margin-right: 1em !important;
+                        }
+                    }   /* end menu-item-promoted */
+
+                    .inner-item {
+                        display: inline-block;
+                        border-bottom: 1px solid @color-swatch3;
+                        padding-bottom: 30px;
+                        margin-bottom: 30px;
+                        h3 {    /* menu-item-name */  
+                            padding: 0;
+                            font-family: @font-swatch3-font-family;
+                            color: @font-swatch3-color;
+                        }
+                        img {   /* menu-item-image */
+                            border: none;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            border-radius: 5px;
+                            width: 100%;
+                            margin-top: 5px;
+                        }
+                        .menu-item-price p {   /* standard-price */
+                            font-family:@font-swatch9-font-family;
+                            font-size:@font-swatch9-font-size;
+                            font-weight: @font-swatch9-font-weight;
+                            line-height:@font-swatch9-line-height;
+                            color: @font-swatch9-color;
+                            letter-spacing: @font-swatch9-letter-spacing;
+                            padding: 0px;
+                            margin: 0;
+                            display: inline-block;
+                        }
+                        p {    /* item-description */
+                            font-family:@font-swatch5-font-family;
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color:@font-swatch5-color;
+                            letter-spacing: @font-swatch5-letter-spacing;
+                            float: left;
+                            padding: 0;
+                        }
+                        h4 {  /* nutritional-title */
+                            font-family:@font-swatch4-font-family;
+                            font-size:@font-swatch4-font-size;
+                            font-weight: @font-swatch4-font-weight;
+                            line-height:@font-swatch4-line-height;
+                            color: @font-swatch4-color;
+                            letter-spacing: @font-swatch4-letter-spacing;
+                            float: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .menu-item-nutritional-prop { 
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color: @font-swatch5-color;
+                            float: left;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .menu-section-item-dietary-props {
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+                            float: left;
+                            .dietary-icon {
+                                background-color: @color-swatch3;
+                                width: 20px;
+                                height: 20px;
+                                background-size: 20px;
+                                margin: 5px 5px 0 0;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                display: inline-block;
+                                border-radius: 50%;
+                            }
+
+                        } /* end menu-section-item-dietary-props */
+
+                        .menu-item-description, .menu-section-item-description {
+                            margin-bottom: 0.5em;
+                            width: 100%;
+                        }
+
+                    }   /* end inner-item */
+
+                }  /* end li .menu-item */
+
+            }   /* end ol .menu-items */  
+
+            .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */  
+                border: 6px solid @color-swatch3;
+                padding: 2em 2em 0;
+                margin-bottom: 2em;
+                position: relative;
+                &:before {
+                   content: " ";
+                   position: absolute;
+                   top: 3px;
+                   left: 3px;
+                   right: 3px;
+                   bottom: 3px;
+               }
+                @media @mobile {
+                    padding: 0 2em 0;
+                }
+                .menu-subsection-header {
+                    border-bottom: 1px solid @color-swatch3;
+                    margin-bottom: 20px;
+                }
+            } /* end PROMOTED SUB-SECTION */
+
+            .menu-info {
+                display: inline-block;
+                text-align: center;
+                margin: 2.5em 0;
+                padding: 20px;
+                width: 100%;
+                @media @tablet { 
+                    margin: 0;
+                    padding: 0px;
+                }
+                p {    /* menu-note */
+                    float: left;
+                    width: 100%;
+                    color: @color-swatch4;
+                    margin-bottom: 10px;
+                }
+                dl {    /* menu-dietary-key */
+                    display: inline-block;
+                    margin: 5px 0;
+                    text-align: block;
+                    dt, dd {
+                        display: inline-block;
+                    }
+                    dt {    /* dietary-icon */
+                        vertical-align: top; 
+                        width: 20px;
+                        height: 20px;
+                        background-size: 20px;
+                        background-color: @color-swatch3;
+                        border: 2px solid @color-swatch6;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .vegetarian-icon {
+                        background-image: image('/images/veggie-icon.png');
+                    }
+                    .glutenFree-icon {
+                        background-image: image('/images/gf-icon.png');
+                    }
+                    dd {    /* text for icon */
+                        font-family:@font-swatch5-font-family;
+                        font-size:@font-swatch5-font-size;
+                        font-weight: @font-swatch5-font-weight;
+                        line-height:@font-swatch5-line-height;
+                        color: @font-swatch5-color; 
+                        letter-spacing: @font-swatch5-letter-spacing;
+                        margin: 0 5px -7px;
+                    }   
+                }/* end dl */
+            }   /* end menu-info */
+    }/* end main */
+
+} /* end .widget.menu */
+
+
+/* ===============================
+   7. FOOTER
+  =============================== */
+
+footer {
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height:@font-swatch5-line-height;
+    letter-spacing: @font-swatch5-letter-spacing;
+    margin-top: 3em;
+    min-height: 40px;
+    background-color: @color-swatch3;
+    padding:10em 0;
+
+        .widget.content {
+            padding: 1em 0em 0em 0em;
+            margin: 0 auto;
+            text-align:center;
+            @media only screen and (max-width: 1084px) {
+            width: 93%;
+            }
+                p {
+                    font-family:@font-swatch9-font-family;
+                    font-size:@font-swatch9-font-size;
+                    font-weight: @font-swatch9-font-weight;
+                    line-height:@font-swatch9-line-height;
+                    color: @font-swatch9-color;
+                    letter-spacing: 2px;
+                }
+            @media @tablet {
+                width:auto;
+            }
+        }
+        .map {
+            border: 4px solid @color-swatch5;
+            -webkit-box-shadow: 1px 0px 0px @color-swatch5;
+            -moz-box-shadow:    1px 0px 0px @color-swatch5;
+            box-shadow:         1px 0px 0px @color-swatch5;
+        }
+}   /* end footer */ 
+
+
+.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before, .widget.menu .main .menu-subsection-header h2:after{
+                        content: "★";
+                        display: inline-block;
+                        height: .1em;
+                        position: relative;
+                        vertical-align: middle;
+                        margin-bottom: 1.4em;
+}
+/* ===============================
+   8. SOCIAL BAR WIDGET / PROFILE DATA
+   =============================== */
+
+.widget.profile .bk-profile-socialicons {
+    text-align: center;
+    font-size:1em;
+    font-family:@font-swatch7-font-family;
+    background-color:@color-swatch3;
+    padding:1em 0em 0em 0em;
+    margin:0;
+    
+    a {
+        text-decoration: none;
+        text-indent: -9999px;
+        white-space: nowrap;
+        height: 33px;
+        width: 33px;
+        background-size: 18px;
+        &:hover {
+        background-color:@color-swatch1;
+        }
+    }
+
+    span {
+        display: inline;
+        padding: 0;
+        font-size:1em;
+        font-family:@font-swatch7-font-family;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-indent: -9999px;
+            white-space: nowrap;
+            height: 33px;
+            width: 33px;
+            border: none;
+            background-position: center;
+            margin-bottom: 6px;
+            margin-right: 0px;
+            background-size: 22px;
+            background-repeat: no-repeat;
+            &:hover {
+              background-color: lighten(@color-swatch3,20%);
+            }
+        }
+    }
+}
+
+
+/* SVG ICONS */
+
+.svg .widget.socialicons span.bk-socialicons-twitter a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.svg');
+}
+
+.svg .widget.socialicons span.bk-socialicons-linkedin a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-facebook a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-rss a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-googleplus a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.svg')
+}
+
+.svg .widget.socialicons span.bk-socialicons-youtube a,
+.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.svg')
+}
+
+/* PNG ICONS */
+
+.widget.socialicons span.bk-socialicons-twitter a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
+    background-image: image('/images/social/socialicons-twitter.png');
+}
+
+.widget.socialicons span.bk-socialicons-linkedin a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
+    background-image: image('/images/social/socialicons-linkedin.png')
+}
+
+.widget.socialicons span.bk-socialicons-facebook a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
+    background-image: image('/images/social/socialicons-facebook.png')
+}
+
+.widget.socialicons span.bk-socialicons-rss a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
+    background-image: image('/images/social/socialicons-rss.png')
+}
+
+.widget.socialicons span.bk-socialicons-googleplus a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
+    background-image: image('/images/social/socialicons-googleplus.png')
+}
+
+.widget.socialicons span.bk-socialicons-youtube a,
+.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
+    background-image: image('/images/social/socialicons-youtube.png')
+}
+
+/* ===============================
+   CONTACT FORM WIDGET
+   =============================== */
+
+
+.widget.contactform form {
+    display: block;
+    padding-top: 30px;
+    background-color: @color-swatch1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-align:center;
+}
+
+.widget.contactform fieldset {
+    border: none;
+    padding: 0;
+}
+
+.widget.contactform fieldset label {
+    width: 100%;
+    float: left;
+    font-family:@font-swatch4-font-family;
+    font-size:font-swatch4-font-size;
+    font-weight:@font-swatch4-font-weight;
+    line-height:@font-swatch4-line-height;
+    color:@color-swatch3;
+    letter-spacing: @font-swatch4-letter-spacing;
+    display:none;
+}
+
+.widget.contactform form fieldset input {
+    width: 100%;
+    padding:5px 0px;
+    border:1px solid @color-swatch3;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: lighten(@font-swatch5-color,20%);
+    text-indent: 12px;
+    margin-bottom: 20px;
+    background-color:transparent;
+}
+
+.widget.contactform form fieldset textarea {
+    width: 100%;
+    border:1px solid @color-swatch3;
+    font-family: @font-swatch5-font-family;
+    font-size: @font-swatch5-font-size;
+    color: @font-swatch5-color;
+    text-indent: 8px;
+    padding-top: 14px;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: none;
+    padding: 10px 0px 100px 0px;
+    background-color:transparent;
+}
+
+.widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
+  outline: none;
+}
+
+/* PLACEHOLDER CSS */
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    @color-swatch5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:   @color-swatch5;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    @color-swatch5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    @color-swatch5;
+}
+
+.widget.contactform form fieldset button.btn {
+  padding: 15px 30px;
+  border:1px solid @color-swatch3;
+  font-family: @font-swatch7-font-family;
+  font-size: @font-swatch7-font-size;
+  font-weight:@font-swatch7-font-weight;
+  color: @font-swatch7-color;
+  text-decoration: none;
+  background-color:transparent;
+}
+  
+.widget.contactform form fieldset button.btn:hover {
+  background-color: transparent;
+  color: @font-swatch7-color;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.widget.contactform fieldset button.btn.justifyleft
+{
+    text-align: left;
+}
+
+.widget.contactform fieldset button.btn.justifycenter
+{
+    text-align: center;
+}
+
+.widget.contactform fieldset button.btn.justifyright
+{
+    text-align: right;
+}
+
+.widget.contactform fieldset button.btn.justifyfull
+{
+    text-align: justify;
+}
+
+.widget.contactform fieldset button.btn.italic {
+    font-style: italic;
+}
+
+.widget.contactform fieldset button.btn.bold {
+    font-weight: bold;
+}
+
+/* ===============================
+   9. IPAD WIDTH
+   =============================== */
+
+@media only screen and (max-width: 768px) {
+
+  /* UL ALIGN RIGHT */
+
+    .widget.extendednavigation ul.align-right li.folder {
+        background-position: 12px center;
+        padding-right: 0;
+    }
+    .widget .extendednavigation a.menu-pull:after {
+        right: 42%;
+    }
+    .widget.menusections a.menu-pull {
+        top:20px;
+        right:42%;
+    }
+        .widget.menusections{
+        width:20%;
+        margin:0px auto;
+    }
+    .bk-content-text h2:before, .bk-content-text h2:after {
+      display:none;
+    }
+
+    .widget.menu .main .menu-header h1:before, .widget.menu .main .menu-subsection-header h1:before, .widget.menu .main .menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before, .widget.menu .main .menu-header h1:after, .widget.menu .main .menu-subsection-header h1:after, .widget.menu .main .menu-header h2:after, .widget.menu .main .menu-subsection-header h2:after {
+        display:none;
+    }
+
+    .widget.menu .main{
+        background-color:transparent;
+    }
+}
+
+/* ===============================
+   9. IPHONE WIDTH
+   =============================== */
+
+@media only screen and (max-width: 480px) {
+
+  /* UL ALIGN RIGHT */
+
+    .widget.extendednavigation ul.align-right li.folder {
+        background-position: 12px center;
+        padding-right: 0;
+    }
+    .widget .extendednavigation a.menu-pull:after {
+        right: 38%;
+    }
+
+    .widget.menusections a.menu-pull{
+        right:38%;
+    }
+
+        .widget.menusections a.pull {
+        top:20px;
+    }
+
+    header .companyheader .companyname a {
+          font-size: bkscale(@font-swatch1-font-size,1);
+          line-height:bkscale(@font-swatch1-line-height,1);
+          padding-bottom:0px;  
+    }
+
+    .bk-content-text p {
+        font-size: bkscale(@font-swatch5-font-size,1.2);
+          line-height:bkscale(@font-swatch5-line-height,1.2);
+    }
+
+    h1 {
+          font-size: bkscale(@font-swatch1-font-size,0.8);
+          line-height:bkscale(@font-swatch1-line-height,0.8);
+    }
+
+    h2 {
+          font-size: bkscale(@font-swatch2-font-size,0.6);
+          line-height:bkscale(@font-swatch2-line-height,0.6);
+    }
+    .bk-content-text h2 {
+        font-size: bkscale(@font-swatch3-font-size,1.2);
+        line-height:bkscale(@font-swatch3-line-height,1.2);
+    }
+    .menu-subsection-name {
+        font-size: bkscale(@font-swatch2-font-size,0.6);
+          line-height:bkscale(@font-swatch2-line-height,0.6);
+    }
+
+    .widget.menu {
+        padding:30px 0 0;
+    }
+
+    .widget.menusections{
+        width:20%;
+        margin:0px auto;
+    }
+
+    .widget.menu {
+      margin-top:0px;
+    }
+
+    .bk-content-text h2:before, .bk-content-text h2:after {
+      display:none;
+    }
+
+    header .companyheader{
+        margin:0px
+    }
+
+    .widget.contactform form {
+        padding-top:10px;
+    }
+
+    .widget.menu .main .menu-header h1, .widget.menu .main .menu-subsection-header h1, .widget.menu .main .menu-header h2, .widget.menu .main .menu-subsection-header h2 {
+        padding:0;
+    }
+
+    .widget.menu .main{
+        background-color:transparent;
+    }
+}
+
