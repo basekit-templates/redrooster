@@ -583,6 +583,18 @@ header {
                                 display: inline-block;
                                 border-radius: 50%;
                             }
+                    .vegetarian-icon {
+                        background-image: image('/images/v.png');
+                    }
+                    .glutenFree-icon {
+                        background-image: image('/images/gf.png');
+                    }
+                    .nutFree-icon {
+                        background-image: image('/images/nf.png');
+                    }
+                    .dairyFree-icon {
+                        background-image: image('/images/df.png');
+                    }
 
                         } /* end menu-section-item-dietary-props */
 
@@ -653,10 +665,16 @@ header {
                         background-position: center;
                     }
                     .vegetarian-icon {
-                        background-image: image('/images/veggie-icon.png');
+                        background-image: image('/images/v.png');
                     }
                     .glutenFree-icon {
-                        background-image: image('/images/gf-icon.png');
+                        background-image: image('/images/gf.png');
+                    }
+                    .nutFree-icon {
+                        background-image: image('/images/nf.png');
+                    }
+                    .dairyFree-icon {
+                        background-image: image('/images/df.png');
                     }
                     dd {    /* text for icon */
                         font-family:@font-swatch5-font-family;
@@ -704,6 +722,7 @@ footer {
                     line-height:@font-swatch9-line-height;
                     color: @font-swatch9-color;
                     letter-spacing: 2px;
+                    padding:0px 10px;
                 }
             @media @tablet {
                 width:auto;
