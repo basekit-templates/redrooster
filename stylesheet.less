@@ -189,6 +189,7 @@ ol, li, ul {
     padding: 20px 0 10px 0;
     min-height: 30px;
     background-color: rgba(1, 1, 1, 0.05);
+    margin-top:0;
     ul {
         display: inline-block;
         list-style: none;
@@ -990,6 +991,232 @@ footer {
 }
 
 /* ===============================
+   EXTENDED NAVIGATION
+   =============================== */
+
+.widget.extendednavigation {
+  position: relative;
+  max-width: 960px;
+  margin:0px auto;
+  display:table;
+}
+
+.widget.extendednavigation a.pull {
+  display: none;
+}
+
+.widget.extendednavigation ul {
+  margin: 0;
+  padding: 0;
+}
+
+.widget.extendednavigation ul li, .widget.extendednavigation li:hover ul li{
+    background-color: darken(@color-swatch2,75%);
+}
+
+/* ALIGNMENTS */
+
+.widget.extendednavigation ul.align-center li, .widget.extendednavigation ul.align-center li:hover ul li {
+  text-align: center;
+}
+
+.widget.extendednavigation ul.align-left li, .widget.extendednavigation ul.align-left li:hover ul li
+{
+  text-align: left;
+}
+
+.widget.extendednavigation ul.align-right li, .widget.extendednavigation ul.align-right li:hover ul li
+{
+  text-align: right;
+}
+
+.widget.extendednavigation ul li {
+  float: left;
+  display: block;
+  text-align: left;
+}
+
+.widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
+  display: block;
+  padding: 6px 30px;
+  font-family:@font-swatch6-font-family;
+  font-size:@font-swatch6-font-size;
+  font-weight: @font-swatch6-font-weight;
+  color: @font-swatch6-color;
+  line-height:@font-swatch6-line-height;
+  letter-spacing: 1.5px;;
+}
+
+.widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder .text:hover {
+  color: @font-swatch6-color-hover;
+  text-decoration: none;
+}
+
+
+/* FOLDER */
+
+.widget.extendednavigation ul li.folder {
+  background-image: image('/images/nav-arrow.png');
+  background-position: right 41px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}     
+
+.widget.extendednavigation ul li.folder:hover {
+  background-color: none;
+}
+
+/* DROPDOWN MENU */
+
+.widget.extendednavigation li > ul {
+  display: none;
+}
+
+.widget.extendednavigation li:hover > ul {
+  display: block;
+  position: absolute;
+  background-color: @color-swatch7;
+  z-index: 500;
+  padding:10px 0px;
+}
+
+.widget.extendednavigation li:hover > ul li {
+  display: block;
+  width: 100%;
+  padding: 0 32px 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.widget.extendednavigation li:hover > ul li a {
+  display: block;
+  color: @color-swatch5;
+  padding: 0;
+}
+
+.widget.extendednavigation ul li:hover > ul li .text {
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+
+/* ===============================
+   EXTENDED NAVIGATION - MAIN ZONE
+   =============================== */
+
+.main .widget.extendednavigation {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+}
+
+.main .widget.extendednavigation:before,
+.main .widget.extendednavigation:after {
+  content: " ";
+  display: table;
+}
+.main .widget.extendednavigation:after {
+  clear: both;
+}
+.main .widget.extendednavigation {
+  *zoom: 1;
+}
+
+.main .widget.extendednavigation a.pull {
+  display: none;
+}
+
+.main .widget.extendednavigation ul {
+  float: left;
+  margin: 1px 0 0;
+  padding: 0;
+}
+
+.main .widget.extendednavigation ul li {
+  float: left;
+  display: block;
+  text-align: left!important;
+}
+
+.main .widget.extendednavigation ul li a, .main .widget.extendednavigation ul li.folder .text {
+  display: block;
+  padding: 32px 30px;
+  font-family:@font-swatch6-font-family;
+  font-size:@font-swatch6-font-size;
+  font-weight: @font-swatch6-font-weight;
+  color: @font-swatch4-color;
+  line-height:@font-swatch6-line-height;
+  letter-spacing: @font-swatch6-letter-spacing;
+}
+
+.main .widget.extendednavigation ul li a:hover, .main .widget.extendednavigation ul li.folder .text:hover {
+  color: lighten(@font-swatch4-color,10%);
+  text-decoration: none;
+}
+
+/* FOLDER */
+
+.main .widget.extendednavigation ul li.folder {
+  margin-right: 16px;
+  background-image: image('/images/nav-arrow-dk.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.main .widget.extendednavigation ul li.folder:hover {
+    background-color: @color-swatch2;
+}
+
+.main .widget.extendednavigation ul li.folder .text:hover {
+  color: @color-swatch3;
+}
+
+/* DROPDOWN MENU */
+
+.main .widget.extendednavigation li > ul {
+  display: none;
+}
+
+.main .widget.extendednavigation li:hover > ul {
+  display: block;
+  width: 46%;
+  position: absolute;
+  background-color: @color-swatch2;
+  border-top: 0;
+  z-index: 500;
+  padding: 14px 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+}
+
+.main .widget.extendednavigation li:hover > ul > li {
+  display: block;
+  width: 100%;
+  text-align: left!important;
+  padding: 0 30px 0;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.main .widget.extendednavigation li:hover > ul > li > a {
+  display: block;
+  color: @color-swatch5;
+  padding: 0;
+}
+
+
+.main .widget.extendednavigation ul li:hover > ul li .text {
+  padding: 0 0 0 16px;
+  background-image: image('/images/arrow-left.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+/* ===============================
    9. IPAD WIDTH
    =============================== */
 
@@ -1009,7 +1236,7 @@ footer {
         right:42%;
     }
         .widget.menusections{
-        width:20%;
+        width:13%;
         margin:0px auto;
     }
     .bk-content-text h2:before, .bk-content-text h2:after {
@@ -1085,6 +1312,7 @@ footer {
     .widget.menusections{
         width:20%;
         margin:0px auto;
+        padding:10px 0px;
     }
 
     .widget.menu {

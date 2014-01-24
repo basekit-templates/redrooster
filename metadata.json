@@ -101,9 +101,9 @@
             "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "24px",
             "font-weight": "700",
-            "line-height": "26px",
+            "line-height": "36px",
             "color": "@color-swatch6",
-            "color-hover": "@color-swatch6",
+            "color-hover": "@color-swatch4",
             "letter-spacing": "inherit",
             "background-color": "transparent",
             "background-color-hover": "transparent"
