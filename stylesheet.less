@@ -204,7 +204,7 @@ ol, li, ul {
             display: none;
             /* Then these styles are applied */
             width: 100%;
-            margin: 30px 0 0;
+            margin: 0 0 0;
             background-color: @color-swatch1;
         }
 
@@ -250,6 +250,11 @@ ol, li, ul {
                 width: 100%;
                 padding: 1em 0;
                 border-bottom: 1px dotted @color-swatch3;
+            }
+            &:first-child {
+            @media @tablet {
+                margin-top: 30px;
+            }
             }
             &:last-child {
                 @media @tablet {
@@ -586,36 +591,84 @@ header {
                             padding: 0;
                         }
                         .menu-section-item-dietary-props {
-                            display: block;
-                            margin: 0;
-                            padding: 0;
-                            float: left;
-                            .dietary-icon {
-                                background-color: @color-swatch3;
-                                width: 20px;
-                                height: 20px;
-                                background-size: 20px;
-                                margin: 5px 5px 0 0;
-                                background-repeat: no-repeat;
-                                background-position: center;
+                                margin-top: 0.5em;
+                                padding: 0;
                                 display: inline-block;
-                                border-radius: 50%;
-                                text-indent: -9999px;
-                            }
-                            .vegetarian-icon {
-                                background-image: image('/images/v.png');
-                            }
-                            .glutenFree-icon {
-                                background-image: image('/images/gf.png');
-                            }
-                            .nutFree-icon {
-                                background-image: image('/images/nf.png');
-                            }
-                            .dairyFree-icon {
-                                background-image: image('/images/df.png');
-                            }
+                                .dietary-icon {
+                                    background-color: @color-swatch5;
+                                    width: auto;
+                                    height: 25px;
+                                    border: 0;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    border-radius: 5px;
+                                    background-repeat: no-repeat;
+                                    background-size: 19px;
+                                    background-position: center;
+                                    display: block;
+                                    font-family:@font-swatch5-font-family;
+                                    font-size:@font-swatch5-font-size;
+                                    z-index: 9999999;
+                                    color: @color-swatch1;
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                    float: left;
+                                }
+                                .vegetarian-icon {
+                                    &:before { 
+                                    content: "veggie";
+                                    padding: 0 8px;                  
+                                    }
+                                }
+                                .vegan-icon {
+                                    &:before { 
+                                    content: "vegan";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .glutenFree-icon {
+                                    &:before { 
+                                    content: "gf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .nutFree-icon {
+                                    &:before { 
+                                    content: "nf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .dairyFree-icon {
+                                    &:before { 
+                                    content: "df";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .not-spicy-icon {
+                                    display: none;
+                                }
+                                .spicy-icon {
+                                    &:before { 
+                                    content: "mild";
+                                    padding: 7px;
+                                    }
+                                  }
 
-                        } /* end menu-section-item-dietary-props */
+                                .medium-spicy-icon {
+                                    &:before { 
+                                    content: "medium";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .hot-icon {
+                                    &:before { 
+                                    content: "hot";
+                                    padding: 7px;
+                                    }
+                                }
+
+                            } /* end menu-section-item-dietary-props */  
 
                         .menu-item-description, .menu-section-item-description {
                             margin-bottom: 0.5em;
@@ -1275,11 +1328,7 @@ footer {
         right: 38%;
     }
 
-    .widget.menusections a.menu-pull{
-        right:38%;
-    }
-
-        .widget.menusections a.pull {
+    .widget.menusections a.pull {
         top:20px;
     }
 
