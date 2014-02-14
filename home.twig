@@ -3,9 +3,12 @@
 
 {% block content %}
 
-<header>
-    <div class="headerrow wrapper">
+<header class="bk-header">
+    <div class="headerrow">
         <div class="socialheader">
+            {% if pages|length > 1 %}
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    {% endif %}
             {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
         </div>
     </div>
@@ -26,7 +29,7 @@
     {{widget('menu', 'menu1', {})|raw}}
 </div>
 
-<footer>
+<footer class="bk-footer">
     {{widget('content', 'footercolumn1content', {"content":"<p>Red Rooster, 6770 Bertner Avenue, Houston , Texas 77030</p>"})|raw}}
     {{widget('content', 'footercolumn2content', {"content":"<p>0141 403943</p>"})|raw}}
 </footer>

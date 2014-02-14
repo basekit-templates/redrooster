@@ -77,7 +77,7 @@
             "font-family": "\"Oswald\", Arial, sans-serif",
             "font-size": "24px",
             "font-weight": "700",
-            "line-height": "28px",
+            "line-height": "32px",
             "color": "@color-swatch3",
             "letter-spacing": "inherit"
         },
@@ -113,7 +113,7 @@
             "font-size": "18px",
             "font-weight": "700",
             "line-height": "18px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "transparent",
             "background-color-hover": "darken(@color-swatch1,5%)"

@@ -1,3 +1,3 @@
 
-redrooster
+Red Rooster Menu Template
 ========
