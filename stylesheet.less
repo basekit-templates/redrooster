@@ -72,33 +72,7 @@ header.bk-header p {
 }
 
 .bk-content-text h2 {
-    background-color:@color-swatch1;
-    text-align:center;
     overflow:hidden;
-}
-
-.bk-content-text h2:after {
-    content: "";
-    display: inline-block;
-    height: .1em;
-    position: relative;
-    vertical-align: middle;
-    width: 30%;
-    margin-bottom: .15em;
-    left:1em;
-    margin-right:-50px;
-}
-
-.bk-content-text h2:before {
-    content: "";
-    display: inline-block;
-    height: .1em;
-    position: relative;
-    vertical-align: middle;
-    width: 30%;
-    margin-bottom: .15em;
-    right:1em;
-    margin-left:-50px;
 }
 
 .widget.menu .main .menu-items li .inner-item .menu-section-item-dietary-props .dietary-icon {
@@ -382,8 +356,8 @@ header.bk-header {
                         padding: 1.25em 0 0.75em;
                     }
                     h1, h2, {    /* menu-name menu-section-name */
-                text-align: center;
-                overflow: hidden; 
+                        text-align: center;
+                        overflow: hidden; 
                     &:before, &:after {
                         content: "";
                         display: inline-block;
@@ -608,7 +582,6 @@ header.bk-header {
                 padding: 2em 2em 0;
                 margin-bottom: 2em;
                 position: relative;
-                background-color:@color-swatch1;
                 &:before {
                    content: " ";
                    position: absolute;
