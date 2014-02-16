@@ -17,6 +17,7 @@ Table of Contents -
   7. Footer
   8. SOCIAL BAR WIDGET / PROFILE DATA
   9. IPHONE WIDTH
+  10. Print overrides
 */
 
 /* ===============================
@@ -1559,6 +1560,28 @@ blockquote:before {
 
     .widget.logo img {
         width:70px;
+    }
+}
+
+
+
+/* ===============================
+   9. Print Media
+   =============================== */
+@media print {
+    .headerrow,
+    .bk-footer,
+    .bk-header .widget.profile  {
+        display:none;
+    }
+    .companyheader {
+        padding:0px;
+    }
+    .menu-container {
+        display:none;
+    }
+    .menu-info {
+        margin:0px;
     }
 }
 
