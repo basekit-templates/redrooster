@@ -102,6 +102,24 @@ header.bk-header p {
   text-decoration: underline;
 }
 
+.widget.companyaddress p {
+    font-family:@font-swatch8-font-family;
+    font-weight: @font-swatch8-font-weight;
+    color:@font-swatch8-color;
+    line-height:@font-swatch8-line-height;
+    letter-spacing: @font-swatch8-letter-spacing;
+    font-size: @font-swatch8-font-size; 
+}
+
+.widget.profile span {
+    font-family:@font-swatch8-font-family;
+    font-weight: @font-swatch8-font-weight;
+    color:@font-swatch8-color;
+    line-height:@font-swatch8-line-height;
+    letter-spacing: @font-swatch8-letter-spacing;
+    font-size: @font-swatch8-font-size; 
+}
+
 /* ===============================
    4. MENU SECTIONS NAVIGATION
    =============================== */
@@ -494,7 +512,7 @@ header.bk-header {
                                 .dietary-icon {
                                     background-color: @color-swatch5;
                                     width: auto;
-                                    height: 31px;
+                                    height: auto;
                                     border: 0;
                                     -webkit-border-radius: 5px;
                                     -moz-border-radius: 5px;
@@ -510,6 +528,7 @@ header.bk-header {
                                     margin-right: 5px;
                                     margin-bottom: 5px;
                                     float: left;
+                                    padding:5px;
                                 }                                
                                 .not-spicy-icon {
                                     display:none;
@@ -603,16 +622,10 @@ header.bk-header {
   =============================== */
 
 footer.bk-footer {
-    font-family: @font-swatch5-font-family;
-    color: @font-swatch5-color;
-    font-size: @font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    letter-spacing: @font-swatch5-letter-spacing;
-    margin-top: 3em;
     min-height: 40px;
     background-color: @color-swatch3;
-    padding:10em 0;
+    padding:4em 0;
+    text-align:center;
         .widget.content {
             padding: 1em 0em 0em 0em;
             margin: 0 auto;

@@ -31,8 +31,8 @@
     </div> 
 
     <footer class="bk-footer">
-        {{widget('content', 'footercolumn1content', {"content":"<p>Red Rooster, 6770 Bertner Avenue, Houston , Texas 77030</p>"})|raw}}
-        {{widget('content', 'footercolumn2content', {"content":"<p>0141 403943</p>"})|raw}}
+        {{widget('companyaddress', 'companyaddress', {})|raw}}
+        {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
     </footer>
 
 </div>
