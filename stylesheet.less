@@ -17,6 +17,7 @@ Table of Contents -
   7. Footer
   8. SOCIAL BAR WIDGET / PROFILE DATA
   9. IPHONE WIDTH
+  10. Print overrides
 */
 
 /* ===============================
@@ -398,52 +399,7 @@ header.bk-header {
             /* ITEMS */
 
             .menu-items { /* ol */
-                column-count: 2;
-                column-gap: 50px;
-               -moz-column-count: 2;
-               -moz-column-gap: 50px;
-               -webkit-column-count: 2;
-               -webkit-column-gap : 50px;
 
-                @media @tablet { 
-                    column-count: 2;
-                    column-gap: 60px;
-                   -moz-column-count: 2;
-                   -moz-column-gap: 60px;
-                   -webkit-column-count: 2;
-                   -webkit-column-gap : 60px;
-                }
-
-                > * {
-                    break-inside: avoid;
-                    -webkit-column-break-inside: avoid;
-                    -moz-column-break-inside: avoid;
-                    -ms-column-break-inside: avoid;
-                    -o-column-break-inside: avoid;
-                    page-break-inside: avoid;
-                }
-                &.odd {
-                    -webkit-column-count: 3;
-                    -moz-column-count: 3;
-                    column-count: 3;
-                    @media (max-width: 500px) {
-                        -webkit-column-count: 1;
-                        -moz-column-count: 1;
-                        column-count: 1;  
-                    }
-                    &.bk1-columns {
-                        -webkit-column-count: 1;
-                        -moz-column-count: 1;
-                        column-count: 1;
-                    }
-                }
-
-                @media @mobile { 
-                    column-count: 1;
-                   -moz-column-count: 1;
-                   -webkit-column-count: 1;
-                }
-                
                 li {    /* menu-item */
                     position: relative;
                     display: inline-block;
@@ -558,6 +514,9 @@ header.bk-header {
                                     margin-right: 5px;
                                     margin-bottom: 5px;
                                     float: left;
+                                }                                
+                                .not-spicy-icon {
+                                    display:none;
                                 }
 
                             } /* end menu-section-item-dietary-props */  
@@ -598,7 +557,7 @@ header.bk-header {
             .menu-info {
                 display: inline-block;
                 text-align: center;
-                margin: 2.5em 0;
+                margin: 10px 0;
                 padding: 20px;
                 width: 100%;
                 @media @tablet { 
@@ -1601,5 +1560,39 @@ blockquote:before {
     .widget.logo img {
         width:70px;
     }
+}
+
+/* ===============================
+   9. Print override
+   =============================== */
+.print-mixin {
+    .headerrow,
+    .bk-footer,
+    .bk-header .widget.profile  {
+        display:none;
+    }
+    .companyheader {
+        padding:0px;
+    }
+    .menu-container {
+        display:none;
+    }
+    .menu-info {
+        margin:0px;
+    }
+    .widget.menu .main.wrapper {
+        page-break-before:always;
+    }
+    .widget.menu .menu-item-image-wrap {
+        height:150px;
+    }
+}
+
+@media print {
+    .print-mixin;
+}
+
+.bk-print {
+    .print-mixin;
 }
 
