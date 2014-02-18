@@ -1271,7 +1271,6 @@ blockquote:before {
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                border-top: 1px solid @color-swatch7;
                 margin: 0;
                 padding: 50px 0 0;
             }
@@ -1286,7 +1285,7 @@ blockquote:before {
                 }
                 &:last-child {
                     @media @tablet {
-                        border-bottom: 1px solid @color-swatch1;
+                        border-bottom: 0;
                     }
                 }
 
@@ -1470,6 +1469,32 @@ blockquote:before {
     color:@color-swatch3;
 }
 
+.widget .extendednavigation a.pull:after {
+    content: "";
+    background: image('/images/nav-icon.png') no-repeat; 
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    border-radius:0;
+    box-shadow:none;
+    margin-top:20px; 
+}
+
+.bk-pt-default .widget .extendednavigation a.pull:after {
+   content: "";
+   background: image('/images/nav-icon-black.png') no-repeat; 
+   width: 18px;
+   height: 20px;
+   display: inline-block;
+   position: absolute;
+   right: 0;
+   border-radius:0;
+   box-shadow:none;
+   margin-top:20px; 
+}
+
 /* ===============================
    9. IPAD WIDTH
    =============================== */
@@ -1596,8 +1621,16 @@ blockquote:before {
     }
 
     .widget.logo img {
-        width:70px;
+        width:60px;
     }
+
+    .bk-pt-default .widget .extendednavigation ul li {
+    border-bottom:1px dotted @color-swatch3;
+}
+
+.bk-pt-default .widget .extendednavigation ul li:last-child {
+    border-bottom:0;
+}
 }
 
 /* ===============================
