@@ -932,6 +932,27 @@ footer.bk-footer {
     }
 }
 
+.widget.responsiveslideshow .btn-play:after {
+    font-size:20px;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+    background: rgba(0,0,0,0.5);
+    font-size: 0;
+    text-indent: -99999px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 12;
+    width: 11%;
+    height: 42px;
+    top: 43%;
+    left: 45%;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play:after {
+    top:-10px;
+}
+
 /* ===============================
    CONTACT FORM WIDGET
    =============================== */
@@ -1261,11 +1282,11 @@ blockquote:before {
                 @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch2;
+                    border-bottom: 1px dotted @color-swatch1;
                 }
                 &:last-child {
                     @media @tablet {
-                        border-bottom: 1px solid @color-swatch2;
+                        border-bottom: 1px solid @color-swatch1;
                     }
                 }
 
@@ -1344,7 +1365,7 @@ blockquote:before {
                             }
                         &:hover {
                             color: darken(@font-swatch6-color-hover,5%);
-                            text-decoration: none;
+                            text-decoration: underline;
                             @media @tablet {
                                 color: @color-swatch5;
                             }
@@ -1410,6 +1431,14 @@ blockquote:before {
            }
        }
     }
+}
+
+.widget .extendednavigation ul li.folder .text {
+    color:@font-swatch7-color;
+}
+
+.widget .extendednavigation ul li.folder .text:hover {
+    color:@color-swatch4;
 }
 
 .widget .extendednavigation ul li.folder:after {
