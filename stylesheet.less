@@ -122,10 +122,6 @@ header.bk-header p {
    4. MENU SECTIONS NAVIGATION
    =============================== */
 
-.menu-container {
-    background-color: rgba(1, 1, 1, 0.05);
-}
-
 .widget.menusections {
     text-align: center;
     padding: 0;
@@ -919,14 +915,28 @@ footer.bk-footer {
 }   /* end footer */ 
 
 
-.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before, .widget.menu .main .menu-subsection-header h2:after{
+.menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before {
     content: "★";
     display: inline-block;
     height: .1em;
     position: relative;
     vertical-align: middle;
-    margin-bottom: 1.4em;
+    margin-bottom: 1.7em;
+    font-size:30px;
+    margin-right:10px;
 }
+
+.widget.menu .main .menu-subsection-header h2:after {
+    content: "★";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 1.7em;
+    font-size:30px;
+    margin-left:10px;
+}
+
 /* ===============================
    8. SOCIAL BAR WIDGET / PROFILE DATA
    =============================== */
