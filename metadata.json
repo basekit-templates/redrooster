@@ -103,7 +103,7 @@
             "font-weight": "700",
             "line-height": "36px",
             "color": "@color-swatch6",
-            "color-hover": "@color-swatch4",
+            "color-hover": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "transparent",
             "background-color-hover": "transparent"

@@ -92,16 +92,6 @@ header.bk-header p {
     float:none;
 }
 
-.bk-pt-default .widget.extendednavigation ul li a:hover {
-  color: @font-swatch6-color-hover;
-  text-decoration: underline;
-}
-
-.bk-pt-default .widget.extendednavigation ul li.folder .text:hover {
-  color: @font-swatch6-color-hover;
-  text-decoration: underline;
-}
-
 .widget.companyaddress p {
     font-family:@font-swatch8-font-family;
     font-weight: @font-swatch8-font-weight;
@@ -120,6 +110,14 @@ header.bk-header p {
     font-size: @font-swatch8-font-size; 
 }
 
+.widget.feature .feature-bgimg .content h2, .widget.feature .feature-bgimg .content h3 {
+    display:none;
+}
+
+.widget.feature .feature-bgimg {
+    background-color:@color-swatch3;
+}
+
 /* ===============================
    4. MENU SECTIONS NAVIGATION
    =============================== */
@@ -133,6 +131,10 @@ header.bk-header p {
     padding: 0;
     margin: 0;
     min-height: 50px;
+    background-color:rgba(1, 1, 1, 0.05);
+    @media @tablet {
+        background-color:transparent;
+    }
     ul {
         display: inline-block;
         list-style: none;
@@ -184,7 +186,7 @@ header.bk-header p {
         li {
             float: left;
             display: block;
-            padding: 10px 20px;
+            padding: 5px 20px;
             margin: 0;
             @media @tablet {
                 width: 100%;
@@ -211,7 +213,6 @@ header.bk-header p {
                 line-height:@font-swatch6-line-height;
                 letter-spacing: @font-swatch6-letter-spacing;
                 &:hover {
-                    color: @font-swatch6-color-hover;
                     text-decoration: underline;
                 }
                 &:after {
@@ -246,23 +247,286 @@ header.bk-header p {
         }
 }
 
+/* ===============================
+   EXTENDED NAVIGATION
+   =============================== */
+
+.widget {
+    .extendednavigation {
+        float: none;
+        position: relative;
+        max-width: 100%;
+        min-height: 40px;
+        background-color:rgba(1, 1, 1, 0.05);
+        @media @tablet {
+            background-color: transparent;
+        }
+        li {
+            ul {
+                display: none !important;
+            }
+        }
+        ul {
+            display: table;
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0;
+            @media @tablet {
+                /* Hidden until nav icon is clicked */
+                display: none;
+                /* Then these styles are applied */
+                width: 100%;
+                margin: 0;
+                padding: 50px 0 0;
+            }
+            li {
+                float: left;
+                display: block;
+                padding: 5px 0;
+                @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted @color-swatch1;
+                }
+                &:last-child {
+                    @media @tablet {
+                        border-bottom: 0;
+                    }
+                }
+
+                &:hover {
+                    ul {
+                        display: block !important;
+                        position: absolute;
+                        background-color: @color-swatch1;
+                        z-index: 500;
+                        padding: 0;
+                        margin: 5px 0 0 0;
+                        li {
+                            display: block;
+                            width: 100%;
+                                .box-sizing {
+                                    a {
+                                        display: block;
+                                        padding: 0;
+                                    }
+                                }
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 0 15px;
+                    font-family: @font-swatch6-font-family;
+                    font-size: @font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @font-swatch7-color;
+                    line-height: @font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                &.folder {
+                    /* Folder dropdown arrow BG style goes Here */  
+                    margin-right: 20px;            
+                    cursor: pointer;
+                    background-image: none;
+                    @media @tablet {
+                        background-image:image('/images/texture-background.png');
+                        background-repeat: repeat;
+                        background-position: center;
+                    }
+                    .text {
+                        display: block;
+                        padding: 0 15px;
+                        font-family: @font-swatch6-font-family;
+                        font-size: @font-swatch6-font-size;
+                        font-weight: @font-swatch6-font-weight;
+                        color: @font-swatch7-color;
+                        line-height: @font-swatch6-line-height;
+                        letter-spacing: @font-swatch6-letter-spacing;
+                        position: relative;
+                        &:after {
+                            content: "\25BC";
+                            font-size: 8px;
+                            position: absolute;
+                            top: 1px;
+                            display: block;
+                            z-index: 9999999;
+                            right: 0;
+                            color: @color-swatch1;
+                            @media @tablet {
+                                font-size: 10px;
+                                padding-right: 10px;
+                            }
+                        }
+                        @media @tablet {
+                                color: @color-swatch5;
+                            }
+                        &:hover {
+                            text-decoration: underline;
+                            @media @tablet {
+                                color: @color-swatch5;
+                            }
+                        }
+                    }
+                    ul {
+                        padding: 0;
+                        @media @tablet {
+                            margin-top: 14px;
+                        }
+                        li {
+                            a { 
+                                .text {
+                                    color: @font-swatch6-color;
+                                    padding: 0;
+                                    &:after {
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        a {
+           &.pull {
+               display: none;
+               @media @tablet {
+                   display: block;
+                   position: absolute;
+                   margin: 0 auto;
+                   width: 100%;
+                   top: 0;
+                   &:hover {
+                       cursor: pointer;
+                   }
+                   &:after {
+                        content:"\2193";
+                        color: @color-swatch3;
+                        font-size: 1.3em;
+                        text-align: center;
+                        width: 81px;
+                        height: 38px;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        margin: 0 auto;
+                        background-color: lighten(@color-swatch1,10%);
+                        display: inline-block;
+                        position: absolute;
+                        border: none;
+                        -webkit-border-radius: 0 0 50px 50px;
+                        -moz-border-radius: 0 0 50px 50px;
+                        border-radius: 0 0 50px 50px;
+                        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch1,10%);
+                        -moz-box-shadow:    0px 3px 0px darken(@color-swatch1,10%);
+                        box-shadow:         0px 3px 0px darken(@color-swatch1,10%);
+                   }
+               }
+           }
+       }
+    }
+}
+
+.widget .extendednavigation ul li.folder .text {
+    color:@font-swatch7-color;
+}
+
+.widget .extendednavigation ul li.folder .text:hover {
+    color:@color-swatch4;
+}
+
+.widget .extendednavigation ul li.folder:after {
+    display: none;
+}
+
+.bk-pt-default .widget.extendednavigation {
+    background-color:none;
+    min-height:50px;
+    ul {
+        li {
+            &.folder{
+                .text {
+                    color:@font-swatch6-color;
+                }
+            }
+            a {
+                color:@font-swatch6-color;
+            }
+        }
+    }
+}
+
+.bk-pt-default .widget.extendednavigation ul li a:hover {
+    color:@font-swatch6-color;
+}
+
+.bk-pt-default .extendednavigation {
+    background-color:transparent;
+}
+
+.bk-pt-default .widget.extendednavigation ul li a:hover {
+  text-decoration: underline;
+}
+
+.bk-pt-default .widget.extendednavigation ul li.folder .text:hover {
+  text-decoration: underline;
+}
+
+.bk-pt-default .widget .extendednavigation ul li.folder .text:after {
+    color:@font-swatch6-color;
+}
+
+.widget .extendednavigation a.pull:after {
+    content: "";
+    background: image('/images/nav-icon.png') no-repeat; 
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    border-radius:0;
+    box-shadow:none;
+    margin-top:20px; 
+}
+
+.bk-pt-default .widget .extendednavigation a.pull:after {
+   content: "";
+   background: image('/images/nav-icon-black.png') no-repeat; 
+   width: 18px;
+   height: 20px;
+   display: inline-block;
+   position: absolute;
+   right: 0;
+   border-radius:0;
+   box-shadow:none;
+   margin-top:20px; 
+}
 
 /* ===============================
    5. HEADER
    =============================== */
 
 header.bk-header {
-    background-color:@color-swatch3;
     padding:0;
-    background-image: image('/images/trees.png');
     background-repeat: no-repeat;
     background-position:bottom;
     background-size:contain;
-
+    position:absolute;
+    top:0;
+    width:100%;
  .companyheader {
         width:100%;
         float:none;
-        padding:80px 0px 100px 0px;
+        padding:30px 0px;
         .logo, .companyname {
             text-align: center;
             float:none;
@@ -1242,260 +1506,6 @@ blockquote:before {
 }
 
 /* ===============================
-   EXTENDED NAVIGATION
-   =============================== */
-
-.widget {
-    .extendednavigation {
-        float: none;
-        position: relative;
-        max-width: 100%;
-        min-height: 40px;
-        background-color:rgba(1, 1, 1, 0.05);
-        @media @tablet {
-            background-color: transparent;
-        }
-        li {
-            ul {
-                display: none !important;
-            }
-        }
-        ul {
-            display: table;
-            float: none;
-            margin: 0 auto;
-            text-align: center;
-            padding: 0;
-            @media @tablet {
-                /* Hidden until nav icon is clicked */
-                display: none;
-                /* Then these styles are applied */
-                width: 100%;
-                margin: 0;
-                padding: 50px 0 0;
-            }
-            li {
-                float: left;
-                display: block;
-                padding: 5px 0;
-                @media @tablet {
-                    width: 100%;
-                    padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch1;
-                }
-                &:last-child {
-                    @media @tablet {
-                        border-bottom: 0;
-                    }
-                }
-
-                &:hover {
-                    ul {
-                        display: block !important;
-                        position: absolute;
-                        background-color: @color-swatch1;
-                        z-index: 500;
-                        padding: 0;
-                        margin: 5px 0 0 0;
-                        li {
-                            display: block;
-                            width: 100%;
-                                .box-sizing {
-                                    a {
-                                        display: block;
-                                        padding: 0;
-                                    }
-                                }
-                        }
-                    }
-                }
-
-                a {
-                    display: block;
-                    padding: 0 15px;
-                    font-family: @font-swatch6-font-family;
-                    font-size: @font-swatch6-font-size;
-                    font-weight: @font-swatch6-font-weight;
-                    color: @font-swatch7-color;
-                    line-height: @font-swatch6-line-height;
-                    letter-spacing: @font-swatch6-letter-spacing;
-                    &:hover {
-                        color: @font-swatch6-color-hover;
-                        text-decoration: underline;
-                    }
-                }
-
-                &.folder {
-                    /* Folder dropdown arrow BG style goes Here */  
-                    margin-right: 20px;            
-                    cursor: pointer;
-                    background-image: none;
-                    @media @tablet {
-                        background-image:image('/images/texture-background.png');
-                        background-repeat: repeat;
-                        background-position: center;
-                    }
-                    .text {
-                        display: block;
-                        padding: 0 15px;
-                        font-family: @font-swatch6-font-family;
-                        font-size: @font-swatch6-font-size;
-                        font-weight: @font-swatch6-font-weight;
-                        color: @font-swatch7-color;
-                        line-height: @font-swatch6-line-height;
-                        letter-spacing: @font-swatch6-letter-spacing;
-                        position: relative;
-                        &:after {
-                            content: "\25BC";
-                            font-size: 8px;
-                            position: absolute;
-                            top: 1px;
-                            display: block;
-                            z-index: 9999999;
-                            right: 0;
-                            color: @color-swatch1;
-                            @media @tablet {
-                                font-size: 10px;
-                                padding-right: 10px;
-                            }
-                        }
-                        @media @tablet {
-                                color: @color-swatch5;
-                            }
-                        &:hover {
-                            color: darken(@font-swatch6-color-hover,5%);
-                            text-decoration: underline;
-                            @media @tablet {
-                                color: @color-swatch5;
-                            }
-                        }
-                    }
-                    ul {
-                        padding: 0;
-                        @media @tablet {
-                            margin-top: 14px;
-                        }
-                        li {
-                            a { 
-                                .text {
-                                    color: @font-swatch6-color;
-                                    padding: 0;
-                                    &:after {
-                                        content: "";
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-
-        a {
-           &.pull {
-               display: none;
-               @media @tablet {
-                   display: block;
-                   position: absolute;
-                   margin: 0 auto;
-                   width: 100%;
-                   top: 0;
-                   &:hover {
-                       cursor: pointer;
-                   }
-                   &:after {
-                        content:"\2193";
-                        color: @color-swatch3;
-                        font-size: 1.3em;
-                        text-align: center;
-                        width: 81px;
-                        height: 38px;
-                        top: 0;
-                        right: 0;
-                        left: 0;
-                        margin: 0 auto;
-                        background-color: lighten(@color-swatch1,10%);
-                        display: inline-block;
-                        position: absolute;
-                        border: none;
-                        -webkit-border-radius: 0 0 50px 50px;
-                        -moz-border-radius: 0 0 50px 50px;
-                        border-radius: 0 0 50px 50px;
-                        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch1,10%);
-                        -moz-box-shadow:    0px 3px 0px darken(@color-swatch1,10%);
-                        box-shadow:         0px 3px 0px darken(@color-swatch1,10%);
-                   }
-               }
-           }
-       }
-    }
-}
-
-.widget .extendednavigation ul li.folder .text {
-    color:@font-swatch7-color;
-}
-
-.widget .extendednavigation ul li.folder .text:hover {
-    color:@color-swatch4;
-}
-
-.widget .extendednavigation ul li.folder:after {
-    display: none;
-}
-
-.bk-pt-default .widget.extendednavigation {
-    background-color:none;
-    min-height:50px;
-    ul {
-        li {
-            &.folder{
-                .text {
-                    color:@font-swatch6-color;
-                }
-            }
-            a {
-                color:@font-swatch6-color;
-            }
-        }
-    }
-}
-
-.bk-pt-default .extendednavigation {
-    background-color:transparent;
-}
-
-.bk-pt-default .widget .extendednavigation ul li.folder .text:after {
-    color:@color-swatch3;
-}
-
-.widget .extendednavigation a.pull:after {
-    content: "";
-    background: image('/images/nav-icon.png') no-repeat; 
-    width: 18px;
-    height: 20px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    border-radius:0;
-    box-shadow:none;
-    margin-top:20px; 
-}
-
-.bk-pt-default .widget .extendednavigation a.pull:after {
-   content: "";
-   background: image('/images/nav-icon-black.png') no-repeat; 
-   width: 18px;
-   height: 20px;
-   display: inline-block;
-   position: absolute;
-   right: 0;
-   border-radius:0;
-   box-shadow:none;
-   margin-top:20px; 
-}
-
-/* ===============================
    9. IPAD WIDTH
    =============================== */
 
@@ -1631,6 +1641,10 @@ blockquote:before {
 .bk-pt-default .widget .extendednavigation ul li:last-child {
     border-bottom:0;
 }
+}
+
+.widget.feature .feature-bgimg {
+    height:0;
 }
 
 /* ===============================

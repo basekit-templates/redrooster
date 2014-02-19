@@ -3,26 +3,27 @@
 
 {% block content %}
 
+<div class="feature-overlay">
+   {{widget('feature', 'featurehome', {"defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': false})|raw}}
+</div>
+
 <header class="bk-header">
-    <div class="headerrow">
-        <div class="socialheader">
-            {% if pages|length > 1 %}
-        {{widget('extendednavigation', 'navigationheader', {})|raw}}
-    {% endif %}
-            {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
-        </div>
-    </div>
-    <div class="companyheader clearfix">
-        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-        {{widget('content', 'headercontent', {"content":"<p>Bar & Grill House</p>"})|raw}}
-    </div>       
+   {% if pages|length > 1 %}
+       {{widget('extendednavigation', 'navigationheader', {})|raw}}
+   {% endif %}
+   {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+   <div class="wrapper">
+       <div class="companyheader">
+           {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+           {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+           {{widget('content', 'headercontent', {"content":"<p>Bar &amp; Grill House</p>"})|raw}}
+       </div>
+   </div>
 </header>
 
 <div class="menu-container">
-    <div class="wrapper clearfix">
         {{widget('menusections', 'menusections1', {})|raw}}
-    </div>
+        {{widget('menu', 'menu1', {})|raw}}
 </div>
 
 <div class="wrapper clearfix">
@@ -35,3 +36,4 @@
     </footer>
 
 {% endblock %}
+
