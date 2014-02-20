@@ -122,6 +122,10 @@ header.bk-header p {
    4. MENU SECTIONS NAVIGATION
    =============================== */
 
+.bk-pt-default .menu-container {
+    background-color: rgba(1, 1, 1, 0.05);
+}
+
 .widget.menusections {
     text-align: center;
     padding: 0;
@@ -770,7 +774,7 @@ header.bk-header {
                                 clear: both;
                                 display: block;
                                 .dietary-icon {
-                                    background-color: @color-swatch5;
+                                    background-color: @color-swatch3;
                                     width: auto;
                                     height: auto;
                                     border: 0;
@@ -780,14 +784,11 @@ header.bk-header {
                                     background-repeat: no-repeat;
                                     background-size: 19px;
                                     background-position: center;
-                                    display: block;
                                     font-family:@font-swatch5-font-family;
                                     font-size:@font-swatch5-font-size;
                                     z-index: 9999999;
                                     color: @color-swatch1;
                                     margin-right: 5px;
-                                    margin-bottom: 5px;
-                                    float: left;
                                     padding:5px;
                                 }                                
                                 .not-spicy-icon {
@@ -1651,10 +1652,15 @@ blockquote:before {
 .bk-pt-default .widget .extendednavigation ul li:last-child {
     border-bottom:0;
 }
-}
 
 .widget.feature .feature-bgimg {
     height:0;
+}
+
+.widget.feature .feature-bgimg .content {
+    height:400px;
+}
+
 }
 
 /* ===============================
