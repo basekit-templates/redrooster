@@ -3,18 +3,13 @@
 
 {% block content %}
 
-<div class="tabletmob-nav">
-                {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
-</div>
+<div class="bk-pt-default">
 
 <div class="feature-overlay">
    {{widget('feature', 'featurehome', {"defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': false})|raw}}
 </div>
 
 <header class="bk-header">
-   {% if pages|length > 1 %}
-       {{widget('extendednavigation', 'navigationheader', {})|raw}}
-   {% endif %}
    {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
    <div class="wrapper">
        <div class="companyheader">
@@ -26,7 +21,7 @@
 </header>
 
 <div class="menu-container">
-        {{widget('menusections', 'menusections1', {})|raw}}
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
 </div>
 
 <div class="wrapper clearfix">
@@ -37,6 +32,8 @@
         {{widget('companyaddress', 'companyaddress', {})|raw}}
         {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
     </footer>
+
+    </div>
 
 {% endblock %}
 
