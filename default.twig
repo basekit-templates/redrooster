@@ -3,13 +3,18 @@
 
 {% block content %}
 
-<div class="bk-pt-default">
+<div class="tabletmob-nav">
+   {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
+</div>
 
 <div class="feature-overlay">
    {{widget('feature', 'featurehome', {"defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': false})|raw}}
 </div>
 
 <header class="bk-header">
+  {% if pages|length > 1 %}
+       {{widget('extendednavigation', 'navigationheader', {})|raw}}
+   {% endif %}
    {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
    <div class="wrapper">
        <div class="companyheader">
@@ -22,9 +27,6 @@
 
     <div class="menu-container">
         <div class="wrapper clearfix">
-                        {% if pages|length > 1 %}
-            {{widget('extendednavigation', 'navigationheader', {})|raw}}
-        {% endif %}
         </div>
     </div>
 
