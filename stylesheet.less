@@ -733,22 +733,26 @@ header.bk-header {
                         /* Menu image background */
 
                         .menu-item-image-wrap {
-                           background-size: cover;
-                           background-position: center;
-                           -webkit-background-size: cover;
-                           -moz-background-size: cover;
-                           -o-background-size: cover;
-                           clear:both;
-                           background-repeat: no-repeat;
-                           height: 200px;
-                           background-position: center;
-                           -webkit-border-radius: 5px;
-                           -moz-border-radius: 5px;
-                           border-radius: 5px;
+                            background-size: cover;
+                            background-position: center;
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                            clear:both;
+                            background-repeat: no-repeat;
+                            height: 200px;
+                            background-position: center;
+                            -webkit-border-radius: 5px;
+                            -moz-border-radius: 5px;
+                            border-radius: 5px;
+                            @media @tablet {
+                                height: 150px;
+                            }
                            img {
                                display: none;
                            }
                         }
+
                         .menu-item-price p {   /* standard-price */
                             font-family:@font-swatch3-font-family;
                             font-size:@font-swatch3-font-size;
