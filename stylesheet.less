@@ -122,9 +122,23 @@ header.bk-header p {
     margin-top:-1px;
 }
 
+.widget.feature .content {
+    text-align: center;
+}
+
+.widget.feature .feature-bgimg .content p {
+    display: block;
+    text-align: center;
+}
+
 .widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
     height:0;
-    padding:240px 0px;
+    padding: 0;
+}
+
+.widget.feature .feature-bgimg .bk-content-text p {
+    display: block;
+    text-align: center;
 }
 
 /* ===============================
@@ -540,7 +554,7 @@ header.bk-header p {
    5. HEADER
    =============================== */
 
-header.bk-header {
+.widget.feature {
     padding:0;
     background-repeat: no-repeat;
     background-position:bottom;
@@ -548,15 +562,22 @@ header.bk-header {
     position:absolute;
     top:0;
     width:100%;
+    .widget.content {
+        display: block;
+        min-height: 0;
+    }
+    .feature-bgimg {
+        background-color: @color-swatch3;
+        background-image: image('/images/feature-bg.jpg');
+    }
  .companyheader {
-        width:100%;
+    width: 100%;
+    float: none;
+    padding: 1em 0px 4em;
+    .logo, .companyname {
+        text-align: center;
         float:none;
-        padding:30px 0px;
-        .logo, .companyname {
-            text-align: center;
-            float:none;
-        }
-
+}
         .companyname a {
             display: block;
             font-family: @font-swatch10-font-family;
@@ -1680,7 +1701,7 @@ blockquote:before {
     }
 
     .bk-pt-default .widget .extendednavigation ul li {
-    border-bottom:1px dotted @color-swatch3;
+        border-bottom:1px dotted @color-swatch3;
     }
 
     .bk-pt-default .widget .extendednavigation ul li:last-child {
@@ -1688,11 +1709,11 @@ blockquote:before {
     }
 
     .widget.feature .feature-bgimg {
-        height:0;
+        height: 0;
     }
 
     .widget.feature .feature-bgimg .content {
-        padding: 210px 0px;
+        padding: 0;
     }
 
 }
