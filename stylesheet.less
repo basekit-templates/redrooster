@@ -55,15 +55,6 @@ h1, h2, h3, h4, h5, p {
     padding: 0 0 10px;
 }
 
-header.bk-header p {
-    font-family:@font-swatch8-font-family;
-    font-weight: @font-swatch8-font-weight;
-    color:@font-swatch8-color;
-    line-height:@font-swatch8-line-height;
-    letter-spacing: @font-swatch8-letter-spacing;
-    font-size: @font-swatch8-font-size;           
-}
-
 /* ===============================
    3. CUSTOM CSS
    =============================== */
@@ -85,7 +76,7 @@ header.bk-header p {
 }
 
 .widget.logo img {
-    width:100px;
+    width: 90px;
 }
 
 .socialheader {
@@ -110,36 +101,153 @@ header.bk-header p {
     font-size: @font-swatch8-font-size; 
 }
 
-.widget.feature .feature-bgimg .content h2, .widget.feature .feature-bgimg .content h3 {
-    display:none;
+/* ===============================
+   CUSTOM CSS
+   =============================== */
+
+.companytitle {
+  position: relative;
+  width: 100%;
+  border-top: 3px solid @color-swatch5;
+  display: block;
+  margin: 0 auto;
+  padding:20px;
+  height:0;
+  margin-top:30px;
+  margin-left:-20px;
 }
 
-.widget.feature .feature-bgimg {
-    background-color:@color-swatch3;
+.widget.companyname{
+  text-align: center;
+  margin: 0;
 }
 
-.feature-overlay {
-    margin-top:-1px;
+body.edit .widget.navigation, body.edit .widget.extendednavigation {
+ overflow: visible;
 }
 
-.widget.feature .content {
+/* ===============================
+   FEATURE
+   =============================== */
+
+header.bk-header p {
+    font-family:@font-swatch8-font-family;
+    font-weight: @font-swatch8-font-weight;
+    color:@font-swatch8-color;
+    line-height:@font-swatch8-line-height;
+    letter-spacing: @font-swatch8-letter-spacing;
+    font-size: @font-swatch8-font-size;           
+}
+
+header.bk-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
     text-align: center;
+    background-color: transparent;
+    margin-bottom: 2.5em;
+    .wrapper {
+        position: relative;
+        .companyheader {
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            @media @tablet {
+                top: 20px;
+            }
+        }
+    }
 }
 
-.widget.feature .feature-bgimg .content p {
+.widget.feature .feature-bgimg, .widget.feature .feature-bgimg .content {
+    background-color: @color-swatch3;
+   height: 480px;
+   @media @tablet {
+       height: 400px;
+   }
+   @media @mobile {
+       height: 380px;
+   }
+}
+
+.widget.feature .feature-bgimg .content {
     display: block;
     text-align: center;
+    background-color: transparent;
 }
 
-.widget.feature .feature-bgimg .content, .widget.feature .feature-bgimg {
-    height:0;
-    padding: 0;
-}
-
-.widget.feature .feature-bgimg .bk-content-text p {
-    display: block;
+.widget.feature .content .spare {
+    width: 100%;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 1em 0 1.2em;
+    margin: 0 auto; 
+    height: 245px;
+    @media @tablet {
+        padding: 0.8em 0 1em;
+        height: 225px;
+    }
+    @media @mobile {
+        padding: 1em 0;
+    }
 }
+
+/* FEATURE TITLE & STRAPLINE */
+
+.widget.feature .feature-bgimg .content {
+        h2, h3 {
+            width: 90%;
+            margin: 0 5%;
+            padding: 0;
+            @media only screen and (min-width: 1140px) {
+                width: 960px;
+                margin: 0 auto;
+            }
+        }
+        h2 {
+            font-family: @font-swatch10-font-family;
+            font-size: @font-swatch10-font-size;
+            font-weight: @font-swatch10-font-weight;
+            line-height: @font-swatch10-line-height;
+            color: @font-swatch10-color;
+            letter-spacing: @font-swatch10-letter-spacing;
+            @media @tablet {
+                font-size: bkscale(@font-swatch10-font-size,0.65);
+                line-height: bkscale(@font-swatch10-line-height,0.65);
+            }
+        }
+        h3 {
+            font-family: @font-swatch9-font-family;
+            font-size: bkscale(@font-swatch9-font-size, 0.75);
+            font-weight: @font-swatch9-font-weight;
+            line-height: @font-swatch9-line-height;
+            color: @font-swatch9-color;
+            letter-spacing: @font-swatch9-letter-spacing;
+            @media @mobile {
+                font-size: bkscale(@font-swatch8-font-size,0.8);
+                line-height: bkscale(@font-swatch8-line-height,0.8);
+                margin-top: 0.5em;
+            }
+        }
+}
+
+.widget.feature .feature-bgimg .content button {
+    margin-top: 1em;
+    padding: 10px 20px;
+    border: 2px solid @color-swatch1;
+    background-color: transparent;
+    color: @color-swatch1;
+    @media @tablet {
+        padding: 7px 20px;
+    }
+}
+
+.nav-header {
+    line-height: 0;
+}
+
+
 
 /* ===============================
    4. MENU SECTIONS NAVIGATION
@@ -299,6 +407,7 @@ header.bk-header p {
         background-color:rgba(1, 1, 1, 0.05);
         @media @tablet {
             background-color: transparent;
+            min-height: 50px;
         }
         li {
             ul {
@@ -534,7 +643,7 @@ header.bk-header p {
     right: 0;
     border-radius:0;
     box-shadow:none;
-    margin-top:20px; 
+    margin-top: 16px; 
 }
 
 .bk-pt-default .widget .extendednavigation a.pull:after {
@@ -550,84 +659,6 @@ header.bk-header p {
    margin-top:20px; 
 }
 
-/* ===============================
-   5. HEADER
-   =============================== */
-
-.widget.feature {
-    padding:0;
-    background-repeat: no-repeat;
-    background-position:bottom;
-    background-size:contain;
-    position:absolute;
-    top:0;
-    width:100%;
-    .widget.content {
-        display: block;
-        min-height: 0;
-    }
-    .feature-bgimg {
-        background-color: @color-swatch3;
-        background-image: image('/images/feature-bg.jpg');
-    }
- .companyheader {
-    width: 100%;
-    float: none;
-    padding: 1em 0px 4em;
-    .logo, .companyname {
-        text-align: center;
-        float:none;
-}
-        .companyname a {
-            display: block;
-            font-family: @font-swatch10-font-family;
-            font-weight: @font-swatch10-font-weight;
-            color: @font-swatch10-color;
-            line-height: @font-swatch10-line-height;
-            letter-spacing: @font-swatch10-letter-spacing;
-            font-size: @font-swatch10-font-size;
-                &:hover {
-                    text-decoration: none;
-                }
-                @media @mobile {
-                    font-size: bkscale(@font-swatch10-font-size,0.8);
-                    line-height: bkscale(@font-swatch10-line-height,0.8);
-                    padding-bottom: 20px;
-                }
-        } 
-
-    }/* end companyheader */
-
-    .widget.content {
-        text-align: center;
-        width: 100%;
-        margin: 0 auto;
-        margin-top:10px;
-        @media @mobile {
-            width: 100%;
-        }
-    }
-
-    .clicktocall {
-        text-align: center;
-        margin-top: 20px;
-        @media @mobile {
-            margin-bottom: 60px;
-        }
-            a {
-                border: 2px solid @color-swatch3;
-                padding: 10px 13px;
-                font-family: @font-swatch5-font-family;
-                font-size: @font-swatch5-font-size;
-                color: @font-swatch5-color;
-                    &:hover {
-                        color: @color-swatch3;
-                        text-decoration: none;
-                    }
-            }
-    } /* end clicktocall */
-
-}   /* end header */
 
 /* ===============================
    6. MENU
@@ -1637,10 +1668,6 @@ blockquote:before {
           padding-bottom:0px;  
     }
 
-    header.bk-header .companyheader {
-        padding: 30px 0px 60px 0px;
-    }
-
     .bk-content-text p {
         font-size: bkscale(@font-swatch5-font-size,1.2);
           line-height:bkscale(@font-swatch5-line-height,1.2);
@@ -1697,7 +1724,7 @@ blockquote:before {
     }
 
     .widget.logo img {
-        width:60px;
+        width: 80px;
     }
 
     .bk-pt-default .widget .extendednavigation ul li {

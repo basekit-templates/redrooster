@@ -136,7 +136,7 @@
         },
         "font10": {
             "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "100px",
+            "font-size": "80px",
             "font-weight": "700",
             "line-height": "100px",
             "color": "@color-swatch1",
