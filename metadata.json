@@ -119,10 +119,10 @@
             "background-color-hover": "darken(@color-swatch1,5%)"
         },
         "font8": {
-            "font-family": "\"Oleo Script\", Arial, sans-serif",
-            "font-size": "32px",
-            "font-weight": "300",
-            "line-height": "32px",
+            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-size": "80px",
+            "font-weight": "700",
+            "line-height": "100px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
@@ -135,10 +135,10 @@
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Oswald\", Arial, sans-serif",
-            "font-size": "80px",
-            "font-weight": "700",
-            "line-height": "100px",
+            "font-family": "\"Oleo Script\", Arial, sans-serif",
+            "font-size": "32px",
+            "font-weight": "300",
+            "line-height": "32px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         }
