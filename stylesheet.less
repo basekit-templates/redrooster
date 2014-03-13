@@ -128,7 +128,11 @@ body.edit .widget.navigation, body.edit .widget.extendednavigation {
 
 .bk-profile-email a {
     color:@font-swatch10-color;
-} 
+}
+
+.feature-content {
+    margin-top:-1px;
+}
 
 /* ===============================
    FEATURE
@@ -1626,6 +1630,14 @@ blockquote:before {
           line-height:bkscale(@font-swatch1-line-height,1.3);
           padding-bottom:0px;  
     }
+
+    .widget .extendednavigation ul li {
+        border-bottom:0;
+        background-color: lighten(@color-swatch3,5%);
+        z-index: 999999999;
+        position: relative;
+    }
+
 }
 
 /* ===============================
