@@ -3,7 +3,6 @@
 
 {% block content %}
 
-<div class="nav-header">
     <div class="tabletmob-nav">
                 {{widget('extendednavigation', 'tabletmobnavigation', {})|raw}}
     </div>
@@ -21,16 +20,10 @@
             </div>
         </header>
     </div>
+
+<div class="wrapper clearfix">
+    {{zone('main')|raw}}
 </div>
-
-    <div class="menu-container">
-        <div class="wrapper clearfix">
-        </div>
-    </div>
-
-    <div class="main wrapper clearfix">
-        {{zone('main')|raw}}
-    </div> 
 
     <footer class="bk-footer">
         {{widget('companyaddress', 'companyaddress', {})|raw}}
